@@ -1,7 +1,7 @@
 ﻿// Fetch cybersecurity news from an API or RSS feed
 function fetchCybersecurityNews() {
     // Replace the API_URL with the actual API endpoint or RSS feed URL
-    return fetch(https://thehackernews.com/search/label/API%20Security)
+    return fetch(https://www.cshub.com/rss-feeds)
         .then(response => response.json())
         .then(data => data.articles);
 }
