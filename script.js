@@ -1,7 +1,9 @@
 ﻿// Fetch cybersecurity news from an API or RSS feed
 function fetchCybersecurityNews() {
-    // Replace the API_URL with the actual API endpoint or RSS feed URL
-    return fetch(https://www.cshub.com/rss-feeds)
+    const API_KEY = '4b192f81cde447f9bee0353d3b0e20a0';
+    const API_URL = `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${API_KEY}`;
+
+    return fetch(API_URL)
         .then(response => response.json())
         .then(data => data.articles);
 }
