@@ -1,24 +1,24 @@
 ﻿function fetchCybersecurityNews() {
     const API_KEY = '4b192f81cde447f9bee0353d3b0e20a0';
-    const API_URL = `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${API_KEY}`;
+    const API_URL = `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=4b192f81cde447f9bee0353d3b0e20a0`;
 
     return fetch(API_URL)
         .then(response => response.json())
         .then(data => data.articles);
 }
 
-function createPost(article) {
-    const post = document.createElement('article');
+function createPost(title, content) {
+    const article = document.createElement('article');
     const postTitle = document.createElement('h3');
     const postContent = document.createElement('p');
 
-    postTitle.textContent = article.title;
-    postContent.textContent = article.description;
+    postTitle.textContent = title;
+    postContent.textContent = content;
 
-    post.appendChild(postTitle);
-    post.appendChild(postContent);
+    article.appendChild(postTitle);
+    article.appendChild(postContent);
 
-    return post;
+    return article;
 }
 
 function displayNews() {
@@ -27,7 +27,7 @@ function displayNews() {
     fetchCybersecurityNews()
         .then(articles => {
             articles.forEach(article => {
-                const post = createPost(article);
+                const post = createPost(article.title, article.description);
                 newsContainer.appendChild(post);
             });
         })
@@ -36,4 +36,4 @@ function displayNews() {
         });
 }
 
-window.addEventListener('load', displayNews);
+window.addEventListener('DOMContentLoaded', displayNews);
