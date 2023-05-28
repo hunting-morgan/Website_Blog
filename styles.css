@@ -62,7 +62,7 @@ p {
 
 /* Buttons */
 .button-48 {
-    appearance: none;
+    
     animation: Button1 1s ease 2s 1 normal backwards;
     background-color: #020202;
     border-radius: 15px;
@@ -130,7 +130,7 @@ p {
 
 
 .button-58 {
-    appearance: none;
+    
     animation: Button1 1s ease 2.1s 1 normal backwards;
     background-color: #020202;
     border-radius: 15px;
