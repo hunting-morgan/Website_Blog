@@ -1,76 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome, I'm Morgan Hunting</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>About Me</h1>
-
-        <img src="your_photo.jpg" alt="Your Name" width="200" height="200">
-
-        <p>Hello! My name is Your Name and I'm a cybersecurity professional. With a strong background in computer science and [relevant certifications], I specialize in securing digital infrastructure and protecting sensitive data from cyber threats.</p>
-
-        <p>Throughout my [years of experience/education], I have gained extensive knowledge in various areas of cybersecurity, including network security, secure coding practices, vulnerability assessment, and incident response.</p>
-
-        <p>On this website, I'll be sharing my insights, tutorials, and best practices related to cybersecurity. My goal is to create awareness about the importance of online security and help individuals and organizations strengthen their defenses against cyber attacks.</p>
-
-        <p>Feel free to explore my articles and resources, and don't hesitate to reach out to me if you have any questions or would like to collaborate on a project.</p>
-
-        <h2>Contact Me</h2>
-
-        <form action="contact.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <input type="submit" value="Send Message">
-        </form>
-
-        <h2>Cookie Information</h2>
-
-        <div id="cookieInfo"></div>
-    </div>
-
-    <script>
-        // Display cookie information
-        const cookieInfoDiv = document.getElementById('cookieInfo');
-
-        // Function to get all the cookies
-        function getCookies() {
-            const cookies = document.cookie.split(';');
-            const cookieInfo = {};
-
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim().split('=');
-                const name = cookie[0];
-                const value = cookie[1];
-                cookieInfo[name] = value;
-            }
-
-            return cookieInfo;
-        }
-
-        // Function to display cookie information
-        function displayCookieInfo() {
-            const cookies = getCookies();
-            let html = '<ul>';
-
-            for (const name in cookies) {
-                html += `<li>${name}: ${cookies[name]}</li>`;
-            }
-
-            html += '</ul>';
-            cookieInfoDiv.innerHTML = html;
-        }
-
-        displayCookieInfo();
-    </script>
+    <h1>Welcome,</h1>
+    <h2>I'm Morgan Hunting</h2>
+    <p></p>
 </body>
 </html>
